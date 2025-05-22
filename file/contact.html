@@ -93,10 +93,10 @@
             event.preventDefault(); // Prevent form from reloading the page
 
             // Initialize EmailJS
-            emailjs.init("l3KlTmp94QlZpEY43")
+            emailjs.init("A5UXpkGm77RPa2lRC")
 
-            const serviceID = "service_i6lv9e1";
-            const templateID = "template_0p32ylu";
+            const serviceID = "service_ovaxtk6";
+            const templateID = "template_ovj2usj";
 
             // Collect form data
             const params = {
@@ -109,7 +109,7 @@
 
             // Send email using EmailJS
             emailjs
-                .send("service_i6lv9e1","template_0p32ylu", params)
+                .send("service_ovaxtk6","template_ovj2usj", params)
                 .then((response) => {
                     alert(`Thank you, ${params.sendername}! Your message has been sent.`);
                 })

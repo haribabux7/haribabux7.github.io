@@ -63,10 +63,6 @@
             <label for="phone"> Phone Number :</label>
             <input type="tel" id="phone" name="phone" placeholder="phone number" class="contact-inputs" required pattern="[0-9]{10}" />
  
-
-            <label for="subject">Subject :</label>
-            <input id="subject" type="text" name="subject" placeholder="Subject" class="contact-inputs" required />
-
             <label for="message">Message :</label>
             <textarea id="message" name="message" placeholder="Your Message" rows="4" cols="8" required></textarea>
 
@@ -96,20 +92,19 @@
             emailjs.init("A5UXpkGm77RPa2lRC")
 
             const serviceID = "service_ovaxtk6";
-            const templateID = "template_ovj2usj";
+            const templateID = "template_c5ege3o";
 
             // Collect form data
             const params = {
                 sendername: document.querySelector("#name").value,
                 sendermail: document.querySelector("#email").value,
                 phone: document.querySelector("#phone").value,
-                subject: document.querySelector("#subject").value,
                 message: document.querySelector("#message").value,
             };
 
             // Send email using EmailJS
             emailjs
-                .send("service_ovaxtk6","template_ovj2usj", params)
+                .send("service_ovaxtk6","template_c5ege3o", params)
                 .then((response) => {
                     alert(`Thank you, ${params.sendername}! Your message has been sent.`);
                 })

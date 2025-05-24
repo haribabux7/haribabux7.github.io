@@ -1,4 +1,6 @@
 User-agent: *
-Disallow:
-
+Disallow: /private/
+Disallow: /admin/
+Disallow: /public/
+Disallow: /sitemap.xml
 Sitemap: https://haribabux7.github.io/sitemap.xml

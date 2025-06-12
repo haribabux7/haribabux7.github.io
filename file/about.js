@@ -45,3 +45,14 @@ scrollUpBtn.onclick = function() {
 };
 document.documentElement.style.overflow = 'auto';
 document.body.style.overflow = 'auto'; 
+
+const skills = document.querySelectorAll('.skill');
+  let current = 0;
+
+  setInterval(() => {
+    skills.forEach(skill => skill.classList.remove('active'));
+
+    skills[current].classList.add('active');
+
+    current = (current + 1) % skills.length;
+  }, 1500); // 

@@ -71,8 +71,10 @@ y>
                 <div class="text">
                     <h1>Hello! 👋</h1>
                 <p class="about">
-                  I am a skilled web developer and data analyst with strong proficiency in HTML, CSS, JavaScript, Python, SQL, and frameworks such as Bootstrap. My expertise spans responsive web design and front-end development, where I focus on building intuitive, high-performance web applications that align with both user needs and business objectives. I excel in transforming complex requirements into clean, efficient code and user-friendly interfaces, ensuring a seamless user experience across devices.
-In the realm of data analytics, I specialize in data cleaning, analysis, and visualization using advanced tools like Excel, Power BI, Tableau, and Python libraries such as Pandas and Matplotlib. By integrating these tools with my web development capabilities, I create dynamic, data-driven solutions that support strategic decision-making.
+                  I am a skilled web developer and data analyst with strong proficiency in HTML, CSS, JavaScript, Python, SQL, and frameworks such as Bootstrap. 
+                  My expertise spans responsive web design and front-end development, where I focus on building intuitive, high-performance web applications that align with both user needs and business objectives. 
+                  I excel in transforming complex requirements into clean, efficient code and user-friendly interfaces, ensuring a seamless user experience across devices.
+                  In the realm of data analytics, I specialize in data cleaning, analysis, and visualization using advanced tools like Excel, Power BI, Tableau, and Python libraries such as Pandas and Matplotlib. By integrating these tools with my web development capabilities, I create dynamic, data-driven solutions that support strategic decision-making.
                 </p>
                 <div class="socialIcons">
                     <a href="https://wa.me/9092525559"><i class="fa-brands fa-whatsapp"></i></a>
@@ -116,64 +118,6 @@ In the realm of data analytics, I specialize in data cleaning, analysis, and vis
 
 
    <script src="about.js"></script>
-
-   <script>
-    
-       //only snow animation in html
-   const snowflakeCount = 50;
-let mouseX = window.innerWidth / 2;
-let smoothingFactor = 0.05;
-let targetMouseX = mouseX;
-const snowflakes = new Set();
-
-window.addEventListener('mousemove', (event) => {
-  targetMouseX = event.clientX;
-});
-
-const smoothMouseUpdate = () => {
-  mouseX += (targetMouseX - mouseX) * smoothingFactor;
-  requestAnimationFrame(smoothMouseUpdate);
-};
-smoothMouseUpdate();
-
-const createSnowflake = () => {
-  if (snowflakes.size >= snowflakeCount) return;
-
-  const snowflake = document.createElement('div');
-  snowflake.className = 'snowflake';
-  snowflake.innerText = '*';
-  const initialRotation = Math.random() * 360;
-  snowflake.style.left = Math.random() * 100 + 'vw';
-  snowflake.style.animationDuration = 5 + Math.random() * 5 + 's';
-  snowflake.style.fontSize = 8 + Math.random() * 25 + 'px';
-  snowflake.style.transform = `rotate(${initialRotation}deg)`;
-  document.body.appendChild(snowflake);
-  snowflakes.add(snowflake);
-
-  const updateSnowflake = () => {
-    if (!document.body.contains(snowflake)) {
-      snowflakes.delete(snowflake);
-      return;
-    }
-    
-    const rect = snowflake.getBoundingClientRect();
-    const snowflakeX = rect.left + rect.width / 2;
-    const distance = (mouseX - snowflakeX) * 0.02;
-    const rotation = parseFloat(snowflake.style.transform.replace(/rotate\((.*)deg\)/, '$1')) || initialRotation;
-    snowflake.style.transform = `translateX(${distance}px) rotate(${rotation + 1}deg)`;
-    requestAnimationFrame(updateSnowflake);
-  };
-
-  updateSnowflake();
-
-  snowflake.addEventListener('animationend', () => {
-    snowflake.remove();
-    snowflakes.delete(snowflake);
-  });
-};
-
-setInterval(createSnowflake, 600);
-
-  </script>
+   
 </body>
 </html>

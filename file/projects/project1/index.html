@@ -262,7 +262,7 @@
     }
 
     .back-button {
-      position: relative;
+      position: fixed;
       top: -145px;
       left: 140px;
       padding: 10px 15px;
@@ -310,6 +310,43 @@
     }
   }
 
+.project-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0 60px 0;
+}
+
+.nav-btn {
+  padding: 12px 24px;
+  font-size: 14px;
+  background-color: #2f4ad0;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #1a3f8e;
+  transform: scale(1.05);
+}
+
+/* MOBILE VIEW STYLING */
+@media (max-width: 768px) {
+  .project-navigation {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-btn {
+    width: 80%;
+    text-align: center;
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+}
 </style>
 
 
@@ -396,6 +433,10 @@
   <a href="https://github.com/haribabuc458"><i class="fa-brands fa-github"></i></a>
   </div>
 
+<div class="project-navigation">
+  <a href="../project1./index.html" class="nav-btn">&#8592; Previous Project</a>
+  <a href="../project2./index.html" class="nav-btn">Next Project &#8594;</a>
+</div>
 
   <div class="developer">
       <h1>

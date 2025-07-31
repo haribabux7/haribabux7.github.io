@@ -6,7 +6,7 @@
     <meta name="description" content="Portfolio of Hari Babu, Data Analyst and Frontend Developer">
     <meta name="keywords" content="Data Analyst, Frontend Developer, HTML, CSS, JavaScript, Web Development,haribabu,HARI BABU">
     <title>BABU - PROJECT2</title>
-    <link rel="icon"  type="image/jpg" href ="photo.jpg" >
+    <link rel="icon"  type="image/svg+xml" href ="../../../logo.svg" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -110,9 +110,9 @@
   body {
     margin: 0;
     padding: 0;
+    font-family: "Sevillan", cursive;
     background-color: black;
     color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 100%;
     height: 100%;
     position: relative;
@@ -142,7 +142,8 @@
 
   .year {
     font-size: 2.5rem;
-    font-family: "Ewert", serif;
+    font-family: "Kalnia Glaze", serif;
+    font-weight: 400;
     color: #ff4444;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -347,6 +348,15 @@
     padding: 14px 20px;
   }
 }
+#particles-js {
+      position: fixed;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
 </style>
 
 
@@ -369,6 +379,7 @@
             <line class="pl__ball" stroke="url(#pl-grad2)" x1="100" y1="18" x2="100.01" y2="182" stroke-width="36" stroke-dasharray="1 165" stroke-linecap="round" />
         </svg>
     </div>
+     <div id="particles-js"></div>
 <!--main-->
 <button class="scroll-up-btn" id="scrollUpBtn">&#8593;</button>
 <div class="header">
@@ -410,7 +421,7 @@
   <li>Semantic HTML and accessibility improvements (e.g., ARIA labels, keyboard navigation)</li>
 </ul>
 
-<h2>Project Directory Structure</h2>
+<h2>Project Structure  on GitHub</h2>
 <pre>
   📁 project-root/
 ├── 📂 responsive-portfolio/
@@ -435,8 +446,8 @@
 <p>This portfolio site serves not only as a digital résumé but as a technical artifact that reflects professional web development standards. It demonstrates proficiency in responsive design, front-end programming, and third-party API integration—all implemented using a clean and maintainable codebase. The EmailJS functionality, in particular, showcases the ability to enhance user engagement through modern, efficient, and secure tools. The project stands as an example of how thoughtful front-end engineering and design converge to create impactful and accessible digital experiences.</p>
 </div>
 <div class="socialIcons">
-  <a href="https://in.linkedin.com/in/hari-babu-c-h-6a682a284"><i class="fa-brands fa-linkedin"></i></a>
-  <a href="https://github.com/haribabuc458"><i class="fa-brands fa-github"></i></a>
+  <a href="https://in.linkedin.com/in/hari-babu-c-h" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+  <a href="https://github.com/haribabux7" target="blank"><i class="fa-brands fa-github"></i></a>
   </div>
 
   <div class="project-navigation">
@@ -451,13 +462,80 @@
 
 
    <script>
-      //PRELOADER
-  window.addEventListener("load", function() {
-    const preloader = document.getElementById("preloader");
-    preloader.style.display = "none";
-    });
-    const scrollUpBtn = document.getElementById("scrollUpBtn");
+      
+    // PRELOADER + PARTICLES INIT (Optimized)
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  if (preloader) preloader.style.display = "none";
 
+  document.documentElement.style.overflow = 'auto';
+  document.body.style.overflow = 'auto';
+
+  // Initialize particles only if library is available
+  if (window.particlesJS) {
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 70,
+          density: { enable: true, value_area: 800 }
+        },
+        color: { value: "#b38b6d" },
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000000" },
+          polygon: { nb_sides: 5 }
+        },
+        opacity: {
+          value: 0.3,
+          random: false,
+          anim: { enable: false }
+        },
+        size: {
+          value: 2.5,
+          random: true,
+          anim: { enable: false }
+        },
+        line_linked: {
+          enable: true,
+          distance: 120,
+          color: "#ffffff",
+          opacity: 0.25,
+          width: 2
+        },
+        move: {
+          enable: true,
+          speed: 1.2, 
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "grab"
+          },
+          onclick: {
+            enable: false
+          },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 140,
+            line_linked: { opacity: 0.4 }
+          }
+        }
+      },
+      retina_detect: true
+    });
+  }
+});
+const scrollUpBtn = document.getElementById("scrollUpBtn");
 window.onscroll = function() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     scrollUpBtn.style.display = "block";
@@ -482,5 +560,6 @@ document.body.style.overflow = 'auto';
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
   </script>
+  <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </body>
 </html>

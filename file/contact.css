@@ -557,4 +557,7 @@ header {
   .contact-left hr {
     width: 70%;
   }
+.developer {
+   margin-top: -120px;
+}
 }

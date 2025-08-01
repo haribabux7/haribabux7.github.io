@@ -125,7 +125,7 @@
   width: 100%;
   white-space: pre-wrap;
   font-size: 15px;
-  font-family: "Sevillan", cursive;
+  font-family: "Sevillan",serif;
   font-weight: 300;
   font-style: normal;
   margin-top: -20px;
@@ -456,11 +456,13 @@ header {
 }
 
 @media (max-width: 480px) {
+.container{
+     margin-top: 200px;
+}
   .download-button {
     padding: 10px 20px;
     font-size: 13px;
     gap: 8px;
-    width: 100%;
     justify-content: space-between;
   }
 
@@ -468,6 +470,8 @@ header {
     width: 18px;
     height: 18px;
   }
+.socialIcons{
+    margin-top: 30px;
 }
 
 @media (max-width: 768px) {
@@ -486,6 +490,6 @@ header {
 
   .about {
     font-size: 13px;
-    max-width: 300px;
+    max-width: 90%;
   }
 }

@@ -267,12 +267,13 @@ header {
   font-style: italic;
   margin-bottom: 35px;
   color: #fff;
-  font-family: "Sevillan", serif;
+  font-family: "Iceber", serif;
   font-weight: 300;
   font-style: normal;
   padding-left: 150px;
   font-style: normal;
   max-width: 600px;
+  width : 92%;
 }
 
 #line1 {
@@ -328,7 +329,6 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Kalnia+Glaze", serif;
   font-weight: 400;
   font-style: normal;
   opacity: 0;
@@ -367,7 +367,7 @@ header {
 }
 
 .socialIcons a i {
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: white;
   opacity: 1;
   transition: 0.3s ease-in-out;

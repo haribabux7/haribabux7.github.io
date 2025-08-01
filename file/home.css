@@ -122,10 +122,10 @@
 
 .txt {
   max-width: 900px;
-  width: 100%;
+  width: 92%;
   white-space: pre-wrap;
   font-size: 15px;
-  font-family: "Sevillan",serif;
+  font-family: "Iceber",serif;
   font-weight: 300;
   font-style: normal;
   margin-top: -20px;
@@ -470,8 +470,9 @@ header {
     width: 18px;
     height: 18px;
   }
-.socialIcons{
-    margin-top: 30px;
+  .socialIcons{
+    margin-top: 0px;
+  }
 }
 
 @media (max-width: 768px) {

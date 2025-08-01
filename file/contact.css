@@ -336,34 +336,8 @@ header {
   /* Ensure text stays black */
 }
 
-.contact-left button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 25px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #fff;
-  gap: 10px;
-  border: none;
-  border-radius: 50px;
-  background: linear-gradient(270deg, red, #555);
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.contact-left button:hover {
-  background: linear-gradient(270deg, #fff, red);
-  transform: scale(1.05);
-  color: black;
-}
-
-.contact-left button:focus {
-  outline: 2px solid #fff;
-  outline-offset: 4px;
-}
-
  button {
+  margin-top: 20px;
       position: relative;
       font-weight: bold;
       color: white;
